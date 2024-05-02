@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_performing_students",
+  "info": {
+    "singularName": "content-performing-student",
+    "pluralName": "content-performing-students",
+    "displayName": "Content Performing Student"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "text",
+      "required": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "PostLink": {
+      "type": "string",
+      "required": true
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

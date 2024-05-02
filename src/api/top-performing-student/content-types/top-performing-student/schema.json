@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "top_performing_students",
+  "info": {
+    "singularName": "top-performing-student",
+    "pluralName": "top-performing-students",
+    "displayName": "Top Performing Student"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70,
+      "minLength": 10
+    },
+    "Content": {
+      "type": "text",
+      "required": true
+    },
+    "Student": {
+      "type": "string",
+      "required": true
+    },
+    "Company": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "youtube_coding_videos",
+  "info": {
+    "singularName": "youtube-coding-video",
+    "pluralName": "youtube-coding-videos",
+    "displayName": "Youtube Coding Video"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
