@@ -795,6 +795,7 @@ export interface ApiContentPerformingStudentContentPerformingStudent
     singularName: 'content-performing-student';
     pluralName: 'content-performing-students';
     displayName: 'Content Performing Student';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -804,7 +805,7 @@ export interface ApiContentPerformingStudentContentPerformingStudent
     Content: Attribute.Text & Attribute.Required;
     Name: Attribute.String;
     PostLink: Attribute.String & Attribute.Required;
-    Image: Attribute.Media & Attribute.Required;
+    imageLink: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -816,37 +817,6 @@ export interface ApiContentPerformingStudentContentPerformingStudent
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::content-performing-student.content-performing-student',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiSampleSample extends Schema.CollectionType {
-  collectionName: 'samples';
-  info: {
-    singularName: 'sample';
-    pluralName: 'samples';
-    displayName: 'sample';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    images: Attribute.Media;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::sample.sample',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::sample.sample',
       'oneToOne',
       'admin::user'
     > &
@@ -893,6 +863,7 @@ export interface ApiTopPerformingStudentTopPerformingStudent
     singularName: 'top-performing-student';
     pluralName: 'top-performing-students';
     displayName: 'Top Performing Student';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -902,12 +873,12 @@ export interface ApiTopPerformingStudentTopPerformingStudent
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         minLength: 10;
-        maxLength: 70;
+        maxLength: 100;
       }>;
     Content: Attribute.Text & Attribute.Required;
     Student: Attribute.String & Attribute.Required;
     Company: Attribute.String;
-    image: Attribute.Media & Attribute.Required;
+    imageLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1006,7 +977,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::content-performing-student.content-performing-student': ApiContentPerformingStudentContentPerformingStudent;
-      'api::sample.sample': ApiSampleSample;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::top-performing-student.top-performing-student': ApiTopPerformingStudentTopPerformingStudent;
       'api::youtube-coding-video.youtube-coding-video': ApiYoutubeCodingVideoYoutubeCodingVideo;

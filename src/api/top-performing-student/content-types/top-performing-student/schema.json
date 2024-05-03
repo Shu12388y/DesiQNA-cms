@@ -4,7 +4,8 @@
   "info": {
     "singularName": "top-performing-student",
     "pluralName": "top-performing-students",
-    "displayName": "Top Performing Student"
+    "displayName": "Top Performing Student",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,7 @@
     "Title": {
       "type": "string",
       "required": true,
-      "maxLength": 70,
+      "maxLength": 100,
       "minLength": 10
     },
     "Content": {
@@ -28,13 +29,8 @@
     "Company": {
       "type": "string"
     },
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+    "imageLink": {
+      "type": "string"
     }
   }
 }

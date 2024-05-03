@@ -4,7 +4,8 @@
   "info": {
     "singularName": "content-performing-student",
     "pluralName": "content-performing-students",
-    "displayName": "Content Performing Student"
+    "displayName": "Content Performing Student",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,12 +27,8 @@
       "type": "string",
       "required": true
     },
-    "Image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
+    "imageLink": {
+      "type": "string",
       "required": true
     }
   }
